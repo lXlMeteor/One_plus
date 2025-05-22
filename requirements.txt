@@ -1,0 +1,8 @@
+discord.py
+dotenv
+sqlalchemy
+datetime
+googletrans
+langdetect
+asyncio
+psycopg[binary]

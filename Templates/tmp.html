@@ -1,0 +1,128 @@
+<!--ログ機能として実装予定-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord風チャット画面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .chat-container {
+      display: flex;
+      width: 100%;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #2f3136;
+      color: white;
+      padding: 10px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      padding: 10px;
+      cursor: pointer;
+      color: #b9bbbe;
+    }
+
+    .sidebar li:hover {
+      background-color: #393c43;
+    }
+
+    .chat {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #36393f;
+      color: white;
+    }
+
+    .chat-header {
+      padding: 10px;
+      background-color: #2f3136;
+      border-bottom: 1px solid #202225;
+    }
+
+    .chat-messages {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
+
+    .username {
+      font-weight: bold;
+      color: #7289da;
+    }
+
+    .text {
+      margin-left: 5px;
+    }
+
+    .chat-input {
+      padding: 10px;
+      border-top: 1px solid #202225;
+    }
+
+    .chat-input input {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="sidebar">
+      <h2>サーバー名</h2>
+      <ul>
+        <li>チャンネル1</li>
+        <li>チャンネル2</li>
+        <li>チャンネル3</li>
+      </ul>
+    </div>
+    <div class="chat">
+      <div class="chat-header">
+        <h2>#general</h2>
+      </div>
+      <div class="chat-messages">
+        <div class="message">
+          <span class="username">User1</span>
+          <span class="text">こんにちは！</span>
+        </div>
+        <div class="message">
+          <span class="username">User2</span>
+          <span class="text">やあ、元気？</span>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="メッセージを入力...">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
